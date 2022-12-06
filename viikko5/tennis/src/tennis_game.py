@@ -26,13 +26,13 @@ class TennisGame:
     def _find_who_has_lead(self):
         score_difference = self.m_score1 - self. m_score2
         if score_difference == 1:
-            return "Advantage player1"
+            return f"Advantage {self.player1_name}"
         elif score_difference == -1:
-            return "Advantage player2"
+            return f"Advantage {self.player2_name}"
         elif score_difference >= 2:
-            return "Win for player1"
+            return f"Win for {self.player1_name}"
         else:
-            return "Win for player2"
+            return f"Win for {self.player2_name}"
 
     def _get_player_score(self, player_name):
         if player_name == self.player1_name:
